@@ -18,7 +18,7 @@ int main(){
 
     // cout << "Ivestas skaicius yra lygus: " << num << endl;
     //
-    // PVZ.: 2
+    // PVZ 2
     // double savings = 100.0;
     // const double target = 500.0;
     // const double monthlyDeposit = 75.0;
@@ -31,7 +31,7 @@ int main(){
     // }
 
     // cout << "Tikslas pasiektas per " << month << endl;
-    // PVZ.: 3
+    // PVZ 3
     // string password;
 
     // do{
@@ -43,55 +43,79 @@ int main(){
     // } while (password.length() < 8);
 
     // cout << "Slaptazodis yra priimtas." << endl;
-    // PVZ.: 4. Saskaitos valdymo meniu.
+    // PVZ 4. Saskaitos valdymo meniu.
 
-    int balance = 300;
-    int choice;
+    // int balance = 300;
+    // int choice;
 
-    do{
-        cout << "\n--- SASKAITOS MENIU ---\n";
-        cout << "1. Perziureti balansa\n";
-        cout << "2. Papildyti balansa\n";
-        cout << "3. Atlikti mokejima\n";
-        cout << "0. Baigti programa.\n";
-        cout << "Iveskite pasirinkima\n";
-        cin >> choice;
+    // do{
+    //     cout << "\n--- SASKAITOS MENIU ---\n";
+    //     cout << "1. Perziureti balansa\n";
+    //     cout << "2. Papildyti balansa\n";
+    //     cout << "3. Atlikti mokejima\n";
+    //     cout << "0. Baigti programa.\n";
+    //     cout << "Iveskite pasirinkima\n";
+    //     cin >> choice;
 
-        switch(choice){
-            case 1:
-                cout  << "Balansas: " << balance << " EUR\n";
-                break;
-            case 2: {
-                int amount;
-                cout << "Iveskite papildymo suma: ";;
-                cin >> amount;
-                while(amount < 0){
-                    cout << "Neteisinga suma. Iveskite dar karta.\n";
-                    cin >> amount;
-                }
-                balance += amount;
-                cout << "Balansas papildytas.\n";
-            }
-                break;
-            case 3: {
-                int amount;
-                cout << "Iveskite mokejimo suma.\n";
-                cin >> amount;
-                while(amount <= 0 || amount > balance){
-                    cout << "Neteisinga suma. Iveskite dar karta.\n";
-                    cin >> amount;
-                }
-                balance -= amount;
-                cout << "Mokejimas atlikitas sekmingai. \n";
-            }
-                break;
-            case 0:
-                cout << "Programa baigiama.\n";
-                break;
-            default:
-                cout << "Pasirinkimas negalimas.\n";
+    //     switch(choice){
+    //         case 1:
+    //             cout  << "Balansas: " << balance << " EUR\n";
+    //             break;
+    //         case 2: {
+    //             int amount;
+    //             cout << "Iveskite papildymo suma: ";;
+    //             cin >> amount;
+    //             while(amount < 0){
+    //                 cout << "Neteisinga suma. Iveskite dar karta.\n";
+    //                 cin >> amount;
+    //             }
+    //             balance += amount;
+    //             cout << "Balansas papildytas.\n";
+    //         }
+    //             break;
+    //         case 3: {
+    //             int amount;
+    //             cout << "Iveskite mokejimo suma.\n";
+    //             cin >> amount;
+    //             while(amount <= 0 || amount > balance){
+    //                 cout << "Neteisinga suma. Iveskite dar karta.\n";
+    //                 cin >> amount;
+    //             }
+    //             balance -= amount;
+    //             cout << "Mokejimas atlikitas sekmingai. \n";
+    //         }
+    //             break;
+    //         case 0:
+    //             cout << "Programa baigiama.\n";
+    //             break;
+    //         default:
+    //             cout << "Pasirinkimas negalimas.\n";
+    //     }
+    // } while(choice != 0);
+    //
+    // PVZ 5. Studento pazymiu statistika
+
+    const int gradesCount = 5;
+    int grade;
+    int sum = 0;
+    int highestGrade = 0;
+
+    for(int i = 1; i <= gradesCount; i++){
+        cout << "Iveskite " << i << " studento pazymi: ";
+        cin >> grade;
+
+        sum += grade;
+
+        if(grade > highestGrade){
+            highestGrade = grade;
         }
-    } while(choice != 0);
+    }
+
+     double average = static_cast<double>(sum) / gradesCount;
+
+    cout << fixed << setprecision(2);
+    cout << "Pazymiu vidurkis: " << average << endl;
+    cout << "Didziausias pazimys: " << highestGrade << endl;
 
     return 0;
 }
