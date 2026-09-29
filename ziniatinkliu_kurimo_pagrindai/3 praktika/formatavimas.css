@@ -1,0 +1,59 @@
+body {
+    font-family: 'Times New Roman', Times, serif
+}
+
+#divkodas p {
+    margin: 0;
+}
+
+#kodas {
+    font-weight: 100;
+}
+
+.teorema {
+    margin: 0;
+}
+
+.lygtis {
+    margin: 0;
+}
+
+#dotted {
+    text-decoration: underline dotted;
+}
+
+.storas {
+    font-weight: bold;
+}
+
+.sriftas12 {
+    font-size: 12px;
+}
+
+#sriftas18em {
+    font-size: 1.8em;
+}
+
+#sriftas2em {
+    font-size: 2em;
+}
+
+#svoris100 {
+    font-weight: 100;
+}
+
+#svoris200 {
+    font-weight: 200;
+}
+
+#svoris300 {
+    font-weight: 300;
+}
+
+.pabrauktas {
+    text-decoration: underline;
+}
+
+.perbrauktas {
+    text-decoration: line-through;
+}

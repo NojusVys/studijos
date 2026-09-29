@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+}
+.veliava{
+    height: 300px;
+    width: 500px;
+    margin: 20pt auto 20pt auto; /* centre */
+}
+.geltona{
+    background-color: rgb(253, 185, 19);
+}
+#zalia{
+    background-color: rgb(0, 106, 68);
+}
+#raudona{
+    background-color: rgb(193, 39, 45);
+}
+#melyna {
+    background-color: rgb(25, 132, 177);
+    height: 50%;
+}
+#geltona50{
+    height: 50%;
+}
+.geltona, #zalia, #raudona {
+    height: 33%;
+}
